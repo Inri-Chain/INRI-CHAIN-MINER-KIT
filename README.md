@@ -40,6 +40,6 @@ docker compose up -d
 Please read `CONTRIBUTING.md`. Open issues or PRs for fixes and improvements.
 
 ## Contact
-Telegram: https://t.me/YOUR_GROUP
+Telegram: [https://t.me/YOUR_GROUP](https://t.me/+MQyCO6GXZJtmOTJh)
 Explorer: https://explorer.inri.life
 RPC: https://rpc.inri.life
