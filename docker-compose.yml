@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  geth:
+    image: ethereum/client-go:stable
+    container_name: inri-geth
+    restart: unless-stopped
+    volumes:
+      - ./data:/root/.ethereum
+      - ./genesis.json:/root/genesis.json:ro
+      - ./static-nodes.json:/root/.ethereum/geth/static-nodes.json:ro
+    command: >
+      --datadir /root/.ethereum
+      --networkid 3777
+      --http --http.addr 0.0.0.0 --http.port 8545 --http.api eth,net,web3,miner
+      --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.api eth,net,web3
+      --port 30303
+      --syncmode full
+    ports:
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8545:8545"
+      - "8546:8546"
